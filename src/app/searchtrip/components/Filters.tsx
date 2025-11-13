@@ -168,6 +168,7 @@ export default function Filters({
   };
 
   // Optionally apply single controls immediately
+
   const maybeApplySingle = (field: "query" | "age" | "duration" | "budget" | "minRating" | "minSafeScore" | "matchPercent" | "scorePercent") => {
     if (!autoApply) return;
     switch (field) {
@@ -199,6 +200,7 @@ export default function Filters({
   };
 
   // Radio group options
+
   const ratingOptions = [4, 3, 2, 0] as const; // 0 == Any
   const safeOptions = [75, 50, 0] as const; // 0 == Any
   const percentOptions = [90, 70, 50, 0] as const; // 0 == Any
@@ -358,7 +360,7 @@ export default function Filters({
 
         {/* Score Percentage (single-choice radios) */}
         <div>
-          <h3 className="mt-2 font-medium text-sm">Score Percentage</h3>
+          <h3 className="mt-2 font-medium text-sm">Safe</h3>
           <div className="flex flex-col mt-2 text-sm text-gray-700">
             {percentOptions.map((p) => (
               <label key={p} className="flex items-center gap-2 cursor-pointer">

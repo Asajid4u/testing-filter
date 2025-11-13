@@ -1,0 +1,77 @@
+
+export const TRIPS_DEMO = [
+
+{
+id: 102,
+title: "Leader Desert Night Camp",
+description: "Guided desert overnight with expert leader and local cultural experiences.",
+tags: ["Camping", "Leader", "Culture"],
+from: "Ahmedabad, Gujarat",
+to: "Jaisalmer, Rajasthan",
+travelersNeeded: 6,
+price: "₹4,000 / person",
+date: "Jan 12–14, 2026",
+spotsLeft: 1,
+host: {
+name: "Vikram Singh",
+age: 35,
+verified: true,
+location: "Jaisalmer, India",
+rating: 4.8,
+match: 89,
+safeScore: 85,
+category: "Featured Trip Leader",
+},
+image: "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=400&q=80",
+},
+];
+
+
+export const AGENCIES_DEMO = [
+{
+id: 201,
+title: "Alpine Adventures Agency",
+description: "Group departures every month — hiking, culture and photography trips.",
+tags: ["Agency", "Hiking"],
+from: "Kolkata, West Bengal",
+to: "Various",
+travelersNeeded: 0,
+price: "Varies",
+date: "",
+spotsLeft: 0,
+host: {
+name: "Alpine Adventures",
+age: 0,
+verified: true,
+location: "Shimla, India",
+rating: 4.7,
+match: 0,
+safeScore: 88,
+category: "Featured Trip Agency",
+},
+image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=80",
+},
+{
+id: 202,
+title: "Desert Trails Agency",
+description: "Specialists in desert & cultural trips across Rajasthan.",
+tags: ["Agency", "Desert"],
+from: "Ahmedabad, Gujarat",
+to: "Various",
+travelersNeeded: 0,
+price: "Varies",
+date: "",
+spotsLeft: 0,
+host: {
+name: "Desert Trails",
+age: 0,
+verified: true,
+location: "Jaisalmer, India",
+rating: 4.8,
+match: 0,
+safeScore: 90,
+category: "Featured Trip Agency",
+},
+image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80",
+},
+];
