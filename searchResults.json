@@ -1,0 +1,548 @@
+{
+  "bestmatch": [
+    {
+      "id": 1,
+      "name": "Rani singh",
+      "age": 18,
+      "rating": 4.1,
+      "location": "Goa, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Osaka, Japan",
+      "tags": [
+        "Beach",
+        "Photography"
+      ],
+      "match": 88,
+      "price": "₹15k - ₹50k",
+      "duration": 5,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Amit singh",
+      "age": 30,
+      "rating": 4.2,
+      "location": "Mumbai, India",
+      "from": "New York, USA",
+      "to": "Los Angeles, USA",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 17,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ram singh",
+      "age": 20,
+      "rating": 4.3,
+      "location": "Ahmedabad, India",
+      "from": "Paris, France",
+      "to": "London, United Kingdom",
+      "tags": [
+        "Cultural",
+        "Foodie"
+      ],
+      "match": 95,
+      "price": "₹20k - ₹50k",
+      "duration": 20,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Amit singh",
+      "age": 30,
+      "rating": 4.4,
+      "location": "Mumbai, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Mumbai, India",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 27,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Rohit Sharma",
+      "age": 32,
+      "rating": 4.5,
+      "location": "Mumbai, India",
+      "from": "Tokyo, Japan",
+      "to": "Osaka, Japan",
+      "tags": [
+        "History"
+      ],
+      "match": 78,
+      "price": "₹12k -₹30k",
+      "duration": 36,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Amit singh",
+      "age": 26,
+      "rating": 4.6,
+      "location": "Goa, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Los Angeles, USA",
+      "tags": [
+        "Beach",
+        "Photography"
+      ],
+      "match": 88,
+      "price": "₹15k - ₹50k",
+      "duration": 40,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Nisha Kapoor",
+      "age": 27,
+      "rating": 4.7,
+      "location": "Goa, India",
+      "from": "Delhi, India",
+      "to": "Mumbai, India",
+      "tags": [
+        "Foodie",
+        "Culture"
+      ],
+      "match": 88,
+      "price": "₹11k",
+      "duration": 50,
+      "cover": "/searchpageimg/cover1.jpg"
+    }
+  ],
+  "similar": [
+    {
+      "id": 1,
+      "name": "Raju singh",
+      "age": 18,
+      "rating": 4.1,
+      "location": "Goa, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Osaka, Japan",
+      "tags": [
+        "Beach",
+        "Photography"
+      ],
+      "match": 88,
+      "price": "₹15k - ₹50k",
+      "duration": 5,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Amit singh",
+      "age": 30,
+      "rating": 4.2,
+      "location": "Mumbai, India",
+      "from": "New York, USA",
+      "to": "Los Angeles, USA",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 17,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ram singh",
+      "age": 28,
+      "rating": 4.3,
+      "location": "Ahmedabad, India",
+      "from": "Paris, France",
+      "to": "London, United Kingdom",
+      "tags": [
+        "Cultural",
+        "Foodie"
+      ],
+      "match": 95,
+      "price": "₹20k - ₹50k",
+      "duration": 20,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Amit singh",
+      "age": 30,
+      "rating": 4.4,
+      "location": "Mumbai, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Mumbai, India",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 27,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Rohit Sharma",
+      "age": 32,
+      "rating": 4.5,
+      "location": "Mumbai, India",
+      "from": "Tokyo, Japan",
+      "to": "Osaka, Japan",
+      "tags": [
+        "History"
+      ],
+      "match": 78,
+      "price": "₹12k -₹30k",
+      "duration": 36,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Amit singh",
+      "age": 26,
+      "rating": 4.6,
+      "location": "Goa, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Los Angeles, USA",
+      "tags": [
+        "Beach",
+        "Photography"
+      ],
+      "match": 88,
+      "price": "₹15k - ₹50k",
+      "duration": 40,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Nisha Kapoor",
+      "age": 27,
+      "rating": 4.7,
+      "location": "Goa, India",
+      "from": "Delhi, India",
+      "to": "Mumbai, India",
+      "tags": [
+        "Foodie",
+        "Culture"
+      ],
+      "match": 88,
+      "price": "₹11k",
+      "duration": 50,
+      "cover": "/searchpageimg/cover1.jpg"
+    }
+  ],
+  "leader": [
+    {
+      "id": 1,
+      "name": "Raju singh",
+      "age": 18,
+      "rating": 4.1,
+      "location": "Goa, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Osaka, Japan",
+      "tags": [
+        "Beach",
+        "Photography"
+      ],
+      "match": 88,
+      "price": "₹15k - ₹50k",
+      "duration": 5,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Amit singh",
+      "age": 30,
+      "rating": 4.2,
+      "location": "Mumbai, India",
+      "from": "New York, USA",
+      "to": "Los Angeles, USA",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 17,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ram singh",
+      "age": 28,
+      "rating": 4.3,
+      "location": "Ahmedabad, India",
+      "from": "Paris, France",
+      "to": "London, United Kingdom",
+      "tags": [
+        "Cultural",
+        "Foodie"
+      ],
+      "match": 95,
+      "price": "₹20k - ₹50k",
+      "duration": 20,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Amit singh",
+      "age": 30,
+      "rating": 4.4,
+      "location": "Mumbai, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Mumbai, India",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 27,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Rohit Sharma",
+      "age": 32,
+      "rating": 4.5,
+      "location": "Mumbai, India",
+      "from": "Tokyo, Japan",
+      "to": "Osaka, Japan",
+      "tags": [
+        "History"
+      ],
+      "match": 78,
+      "price": "₹12k -₹30k",
+      "duration": 36,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Amit singh",
+      "age": 26,
+      "rating": 4.6,
+      "location": "Goa, India",
+      "from": "Simla, Himachal Pradesh, India",
+      "to": "Los Angeles, USA",
+      "tags": [
+        "Beach",
+        "Photography"
+      ],
+      "match": 88,
+      "price": "₹15k - ₹50k",
+      "duration": 40,
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Nisha Kapoor",
+      "age": 27,
+      "rating": 4.7,
+      "location": "Goa, India",
+      "from": "Delhi, India",
+      "to": "Mumbai, India",
+      "tags": [
+        "Foodie",
+        "Culture"
+      ],
+      "match": 88,
+      "price": "₹11k - ₹35k",
+      "duration": 50,
+      "cover": "/searchpageimg/cover1.jpg"
+    }
+  ],
+  "airecomendation": [
+    {
+      "id": 1,
+      "name": "Amit singh",
+      "age": 18,
+      "location": "Ahmedabad, India",
+      "from": "Nagpur, Maharashtra, India",
+      "tags": [
+        "Cultural",
+        "Foodie"
+      ],
+      "match": 95,
+      "price": "₹20k - ₹50k",
+      "duration": 5,
+      "cover": "/searchpageimg/cover1.jpg",
+      "rating": 4.1
+    },
+    {
+      "id": 2,
+      "name": "Amit singh",
+      "age": 30,
+      "location": "Mumbai, India",
+      "from": "Kolkata, West Bengal, India",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 7,
+      "cover": "/searchpageimg/cover1.jpg",
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "name": "Amit kumar",
+      "age": 28,
+      "location": "Ahmedabad, India",
+      "from": "Nagpur, Maharashtra, India",
+      "tags": [
+        "Cultural",
+        "Foodie"
+      ],
+      "match": 95,
+      "price": "₹20k - ₹50k",
+      "duration": 10,
+      "cover": "/searchpageimg/cover1.jpg",
+      "rating": 4.3
+    },
+    {
+      "id": 4,
+      "name": "Amit Verma",
+      "age": 30,
+      "location": "Mumbai, India",
+      "from": "Kolkata, West Bengal, India",
+      "tags": [
+        "Trek",
+        "Adventure"
+      ],
+      "match": 82,
+      "price": "₹9k - ₹25k",
+      "duration": 7,
+      "cover": "/searchpageimg/cover1.jpg",
+      "rating": 4.4
+    },
+    {
+      "id": 5,
+      "name": "Nisha Kapoor",
+      "age": 27,
+      "location": "Pune, India",
+      "from": "Goa, India",
+      "tags": [
+        "Foodie",
+        "Culture"
+      ],
+      "match": 88,
+      "price": "₹11k",
+      "duration": 5,
+      "cover": "/searchpageimg/cover1.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 6,
+      "name": "leena Patel",
+      "age": 28,
+      "location": "Ahmedabad, India",
+      "from": "Nagpur, Maharashtra, India",
+      "tags": [
+        "Cultural",
+        "Foodie"
+      ],
+      "match": 95,
+      "price": "₹20k - ₹50k",
+      "duration": 10,
+      "cover": "/searchpageimg/cover1.jpg",
+      "rating": 4.6
+    }
+  ],
+  "agencyTravel": [
+    {
+      "id": 1,
+      "name": "Wanderlust Adventures",
+      "description": "Explore amazing cultural and sustainable tours world.",
+      "rating": 4.1,
+      "trust": "High",
+      "verified": true,
+      "tripsCount": 15,
+      "travelersCount": 500,
+      "years": 2,
+      "tags": [
+        "Adventure Travel",
+        "Cultural Tours"
+      ],
+      "avatar": "/searchpageimg/cover1.jpg",
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nomad Paths",
+      "description": "Affordable yet thrilling adventures around the globe.",
+      "rating": 4.0,
+      "trust": "Moderate",
+      "verified": true,
+      "tripsCount": 18,
+      "travelersCount": 400,
+      "years": 4,
+      "tags": [
+        "Budget",
+        "Solo Travel"
+      ],
+      "avatar": "/searchpageimg/cover2.jpg",
+      "cover": "/searchpageimg/cover2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "GoBeyond Tours",
+      "description": "Premium travel experiences with local experts.",
+      "rating": 4.5,
+      "trust": "Low",
+      "verified": true,
+      "tripsCount": 25,
+      "travelersCount": 800,
+      "years": 3,
+      "tags": [
+        "Luxury",
+        "Guided Tours"
+      ],
+      "avatar": "/searchpageimg/cover1.jpg",
+      "cover": "/searchpageimg/cover1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "EcoTrail India",
+      "description": "Eco-friendly adventures and trekking experiences.",
+      "rating": 4.3,
+      "trust": "High",
+      "verified": true,
+      "tripsCount": 20,
+      "travelersCount": 600,
+      "years": 5,
+      "tags": [
+        "Eco",
+        "Adventure",
+        "Trekking"
+      ],
+      "avatar": "/searchpageimg/cover3.jpg",
+      "cover": "/searchpageimg/cover3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Nomad Paths",
+      "description": "Affordable yet thrilling adventures around the globe.",
+      "rating": 4.0,
+      "trust": "Moderate",
+      "verified": true,
+      "tripsCount": 18,
+      "travelersCount": 400,
+      "years": 4,
+      "tags": [
+        "Budget",
+        "Solo Travel"
+      ],
+      "avatar": "/searchpageimg/cover1.jpg",
+      "cover": "/searchpageimg/cover1.jpg"
+    }
+  ]
+}
