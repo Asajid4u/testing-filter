@@ -1,10 +1,13 @@
-
 // AgencyCard
-
 
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import Trip from "../../../../public/searchpageimg/view_trips.png";
+import Profile from "../../../../public/searchpageimg/view_profile.png";
+import Join from "../../../../public/searchpageimg/join_trips.png";
+// import Rating from "../../../../public/searchpageimg/Ratinghigh.png"
 import {
   FaMapMarkerAlt,
   FaCalendarAlt, // Reverted to CalendarAlt for trip date
@@ -19,7 +22,8 @@ import { PiMedalDuotone } from "react-icons/pi";
 import { GoDotFill } from "react-icons/go";
 
 // Define the type for an Agency object, which now matches your 'trip' structure
-export interface Agency { // Renamed from Trip to Agency to fit your context
+export interface Agency {
+  // Renamed from Trip to Agency to fit your context
   id: number;
   title: string; // This is the main title for the card
   description: string;
@@ -30,7 +34,8 @@ export interface Agency { // Renamed from Trip to Agency to fit your context
   price: string;
   date: string; // This is the trip date
   spotsLeft: number;
-  host: { // This is the agency/host information
+  host: {
+    // This is the agency/host information
     name: string;
     age: number; // You might display this
     verified: boolean;
@@ -38,7 +43,10 @@ export interface Agency { // Renamed from Trip to Agency to fit your context
     rating: number;
     match: number; // The match percentage
     safeScore: number;
-    category: "Travel Enthusiast" | "Featured Trip Leader" | "Featured Trip Agency"; // Your original categories
+    category:
+      | "Travel Enthusiast"
+      | "Featured Trip Leader"
+      | "Featured Trip Agency"; // Your original categories
   };
   image: string; // This is the main image for the card
 }
@@ -94,9 +102,9 @@ export default function AgencyCard({ agency }: { agency: Agency }) {
 
   return (
     // Changed fixed width/height to responsive max-width, min-height
-    <div className="   flex flex-col sm:flex-row overflow-hidden w-[950px]  ">
+    <div className=" bg-white rounded-xl shadow-sm h-80 flex flex-col sm:flex-row overflow-hidden w-[950px]  ">
       {/* Left Image Section */}
-      <div className="relative flex shrink-0 rounded-xl h-[360px]">
+      <div className="relative flex shrink-0 w-full sm:w-64 md:w-72  sm:h-auto rounded-bl-md">
         <img
           src={agency.image} // Using 'image' from your trip data
           alt={agency.title}
@@ -125,10 +133,13 @@ export default function AgencyCard({ agency }: { agency: Agency }) {
         <div>
           <div className="flex justify-between items-start">
             <div>
-              <h2 id={`agency-${agency.id}-heading`} className="text-lg font-semibold text-gray-900 leading-tight">
+              <h2
+                id={`agency-${agency.id}-heading`}
+                className="text-lg font-semibold text-gray-900 leading-tight mb-2"
+              >
                 {agency.title} {/* Using 'title' from your trip data */}
               </h2>
-              <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+              <p className="text-gray-600 text-sm mt-1 line-clamp-2 mb-1">
                 {agency.description}
               </p>
             </div>
@@ -144,7 +155,7 @@ export default function AgencyCard({ agency }: { agency: Agency }) {
           </div>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="flex flex-wrap gap-2 mt-2 mb-1">
             {agency.tags.map((tag) => (
               <span
                 key={tag}
@@ -156,7 +167,7 @@ export default function AgencyCard({ agency }: { agency: Agency }) {
           </div>
 
           {/* Trip Info (from, to, date, price) */}
-          <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mt-2">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mt-2 mb-2">
             <div className="flex items-center gap-1">
               <GoDotFill className="text-black" /> {agency.from}
             </div>
@@ -166,23 +177,27 @@ export default function AgencyCard({ agency }: { agency: Agency }) {
             </div>
           </div>
 
-          <div className="flex items-center gap-x-8 gap-y-1 mt-1 text-sm text-gray-600">
+          <div className="flex items-center gap-x-8 gap-y-1 mt-1 text-sm text-gray-600 mb-2 ">
             <div className="flex items-center gap-2">
-              <FaCalendarAlt className="text-gray-400" />
+              <FaCalendarAlt className="text-gray-400 " />
               <div>{agency.date}</div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ml-8">
               <FaWallet className="text-gray-400" />
               <div>{agency.price}</div>
             </div>
           </div>
 
           <div className="flex items-center gap-2 mt-1 text-sm text-gray-600">
-            <FaFlag className="text-gray-400" /> <span>{/* You might put host's trips completed here, if available */}30 Trips Completed</span>
+            <FaFlag className="text-gray-400" />{" "}
+            <span>
+              {/* You might put host's trips completed here, if available */}30
+              Trips Completed
+            </span>
           </div>
 
-          <hr className="my-3" />
+          <hr className="my-3 mt-6" />
         </div>
 
         {/* Host Info & Actions */}
@@ -233,13 +248,34 @@ export default function AgencyCard({ agency }: { agency: Agency }) {
           </div>
 
           <div className="flex gap-2">
-            <button className="bg-[#0A4D4A] text-white text-xs px-6 py-2 rounded-md hover:bg-[#093f3c] transition-colors">
+            <button className="bg-[#0A4D4A] text-white text-xs px-4 py-2 rounded-md hover:bg-[#093f3c] flex items-center justify-center h-8 w-28">
+              <Image
+                src={Trip}
+                alt="View Trip Icon"
+                width={10}
+                height={10}
+                className="mr-1 filter brightness-0 invert"
+              />{" "}
               View Trip
             </button>
-            <button className="bg-[#0A4D4A] text-white text-xs px-6 py-2 rounded-md hover:bg-[#093f3c] transition-colors">
+            <button className="bg-[#0A4D4A] text-white text-xs px-4 py-2 rounded-md hover:bg-[#093f3c] flex items-center justify-center h-8 w-28">
+              <Image
+                src={Join}
+                alt="Join Trip Icon"
+                width={20}
+                height={20}
+                className="mr-1 filter brightness-0 invert"
+              />{" "}
               Join Trip
             </button>
-            <button className="bg-[#0A4D4A] text-white text-xs px-6 py-2 rounded-md hover:bg-[#093f3c] transition-colors">
+            <button className="bg-[#0A4D4A] text-white text-xs px-4 py-2 rounded-md hover:bg-[#093f3c] flex items-center justify-center h-8 w-28">
+              <Image
+                src={Profile}
+                alt="View Profile Icon"
+                width={12}
+                height={12}
+                className="mr-1 filter brightness-0 invert"
+              />{" "}
               View Profile
             </button>
           </div>

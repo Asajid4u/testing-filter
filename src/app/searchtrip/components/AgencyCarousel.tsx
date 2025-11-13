@@ -10,7 +10,7 @@
 import AgencyCard, { Agency } from "./AgencyCard"; // Import both the component and the type
 
 // Sample data for agencies, now matching your 'trip' object structure
-const sampleAgencies: Agency[] = [
+const AGENCIES_DEMO: Agency[] = [
   {
     id: 1,
     title: "Weekend Hiking Adventure in the Alps",
@@ -31,7 +31,7 @@ const sampleAgencies: Agency[] = [
       rating: 4.8,
       match: 92,
       safeScore: 88,
-      category: "Featured Trip Agency",
+      category: "Trip Agency",
     },
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
@@ -56,7 +56,7 @@ const sampleAgencies: Agency[] = [
       rating: 4.9,
       match: 88,
       safeScore: 72,
-      category: "Featured Trip Agency",
+      category: "Trip Agency",
     },
     image:
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&q=80",
@@ -81,7 +81,7 @@ const sampleAgencies: Agency[] = [
       rating: 4.7,
       match: 90,
       safeScore: 45,
-      category: "Featured Trip Agency",
+      category: "Trip Agency",
     },
     image:
       "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80",
@@ -106,7 +106,7 @@ const sampleAgencies: Agency[] = [
       rating: 4.6,
       match: 85,
       safeScore: 78,
-      category: "Featured Trip Leader",
+      category: "Trip Agency",
     },
     image:
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&q=80",
@@ -131,7 +131,7 @@ const sampleAgencies: Agency[] = [
       rating: 4.9,
       match: 95,
       safeScore: 90,
-      category: "Travel Enthusiast",
+      category: "Trip Agency",
     },
     image:
       "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80",
@@ -141,13 +141,10 @@ const sampleAgencies: Agency[] = [
 
 export default function AgencyCarousel() {
   return (
-    <div className=" ">
-      <h3 className="text-lg font-semibold mb-5 ml-2 ">
-        Featured Travel Agencies
-      </h3>
+    
 
-      <div className="flex flex-col items-center space-y-8 -ml-2 rounded-xl w-[950px] h-[200px]">
-        {sampleAgencies.map((agency) => ( // Mapping over sampleAgencies
+      <div className="flex flex-col items-center space-y-8 -ml-4 rounded-xl w-[950px] h-[200px]">
+        {AGENCIES_DEMO.map((agency) => ( // Mapping over sampleAgencies
           <section
             key={agency.id}
             className="w-full flex justify-center px-4"
@@ -157,6 +154,6 @@ export default function AgencyCarousel() {
           </section>
         ))}
       </div>
-    </div>
+  
   );
 }

@@ -1,8 +1,12 @@
-
-
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import Trip from "../../../../public/searchpageimg/view_trips.png";
+import Profile from "../../../../public/searchpageimg/view_profile.png";
+import Join from "../../../../public/searchpageimg/join_trips.png";
+// import Rating from "../../../../public/searchpageimg/Ratinghigh.png"
+
 import {
   FaMapMarkerAlt,
   FaCalendarAlt,
@@ -16,7 +20,7 @@ import {
 import { PiMedalDuotone } from "react-icons/pi";
 import { GoDotFill } from "react-icons/go";
 
-const trips = [
+const TRIPS_DEMO = [
   {
     id: 1,
     title: "Weekend Hiking Adventure in the Alps",
@@ -122,7 +126,7 @@ export default function TripCardList() {
           bg: "bg-yellow-100 text-yellow-800 border-yellow-300",
           avatarBg: "bg-yellow-500 text-white",
         };
-      case "Featured Trip Agency":
+      case "Trip Agency":
         return {
           bg: "bg-orange-100 text-orange-800 border-orange-300",
           avatarBg: "bg-orange-500 text-white",
@@ -145,7 +149,7 @@ export default function TripCardList() {
 
   return (
     <main className="w-[945px] flex flex-col items-center  space-y-6">
-      {trips.map((trip) => {
+      {TRIPS_DEMO.map((trip) => {
         const catStyle = getCategoryStyle(trip.host.category);
 
         return (
@@ -185,15 +189,15 @@ export default function TripCardList() {
               <div className="flex-1 p-4">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h2 className="text-lg font-semibold text-gray-900 leading-tight">
+                    <h2 className="text-lg font-semibold text-gray-900 leading-tight mb-2">
                       {trip.title}
                     </h2>
-                    <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+                    <p className="text-gray-600 text-sm mt-1 line-clamp-2 mb-1">
                       {trip.description}
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 mb-1">
                     <span className="flex gap-2 items-center bg-red-500 text-white text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">
                       <FaExclamationTriangle /> {trip.spotsLeft} spots left
                     </span>
@@ -201,7 +205,7 @@ export default function TripCardList() {
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-2">
+                <div className="flex flex-wrap gap-2 mt-2 mb-2">
                   {trip.tags.map((tag) => (
                     <span
                       key={tag}
@@ -213,7 +217,7 @@ export default function TripCardList() {
                 </div>
 
                 {/* Trip Info */}
-                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mt-2">
+                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mt-3 mb-2">
                   <div className="flex items-center gap-1">
                     <GoDotFill className="text-black" /> {trip.from}
                   </div>
@@ -223,7 +227,7 @@ export default function TripCardList() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-16 mt-1 text-sm text-gray-600">
+                <div className="flex items-center gap-16 mt-1 text-sm text-gray-600 mb-2">
                   <div className="flex items-center gap-2">
                     <FaCalendarAlt className="text-gray-400" />
                     <div>{trip.date}</div>
@@ -235,11 +239,11 @@ export default function TripCardList() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 mt-1 text-sm text-gray-600">
+                <div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
                   <FaFlag /> <span>30 Trips Completed</span>
                 </div>
 
-                <hr className="my-3 mt-15" />
+                <hr className="my-3 mt-10" />
 
                 {/* Host Info */}
                 <div className="flex items-center justify-between">
@@ -291,13 +295,34 @@ export default function TripCardList() {
                   </div>
 
                   <div className="flex gap-2">
-                    <button className="bg-[#0A4D4A] text-white text-xs px-6 py-2 rounded-md hover:bg-[#093f3c]">
+                    <button className="bg-[#0A4D4A] text-white text-xs px-4 py-2 rounded-md hover:bg-[#093f3c] flex items-center justify-center h-8 w-28">
+                      <Image
+                        src={Trip}
+                        alt="View Trip Icon"
+                        width={10}
+                        height={10}
+                        className="mr-1 filter brightness-0 invert"
+                      />{" "}
                       View Trip
                     </button>
-                    <button className="bg-[#0A4D4A] text-white text-xs px-6 py-2 rounded-md hover:bg-[#093f3c]">
+                    <button className="bg-[#0A4D4A] text-white text-xs px-4 py-2 rounded-md hover:bg-[#093f3c] flex items-center justify-center h-8 w-28">
+                      <Image
+                        src={Join}
+                        alt="Join Trip Icon"
+                        width={20}
+                        height={20}
+                        className="mr-1 filter brightness-0 invert"
+                      />{" "}
                       Join Trip
                     </button>
-                    <button className="bg-[#0A4D4A] text-white text-xs px-6 py-2 rounded-md hover:bg-[#093f3c]">
+                    <button className="bg-[#0A4D4A] text-white text-xs px-4 py-2 rounded-md hover:bg-[#093f3c] flex items-center justify-center h-8 w-28">
+                      <Image
+                        src={Profile}
+                        alt="View Profile Icon"
+                        width={12}
+                        height={12}
+                        className="mr-1 filter brightness-0 invert"
+                      />{" "}
                       View Profile
                     </button>
                   </div>
