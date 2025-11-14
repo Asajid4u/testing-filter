@@ -353,131 +353,148 @@ export default function Filters({
           </div>
         </div>
 
-        <div className="mb-3">
-          {/* Header with arrow */}
-          <button
-            onClick={() => setRating(!rating)}
-            aria-expanded={rating}
-            className="w-full flex items-center justify-between text-xs font-medium text-gray-700"
+              <div className="mb-3">
+  {/* Header with arrow */}
+  <button
+    onClick={() => setRating(!rating)}
+    aria-expanded={rating}
+    className="w-full flex items-center justify-between text-xs font-medium text-gray-700 mb-2"
+  >
+    <span>Rating</span>
+    <FaChevronDown
+      className={`transition-transform duration-300 ${
+        rating ? "rotate-180" : "rotate-0"
+      }`}
+    />
+  </button>
+
+  {/* Collapsible content */}
+  {rating && (
+    <div className="flex flex-col gap-2">
+      {ratingOptions.map((r: number) => {
+        const isActive = localMinRating === r;
+
+        return (
+          <label
+            key={r}
+            className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer transition
+              ${isActive ? "bg-[#E8F1F1]" : "bg-gray-100"}
+            `}
           >
-            <span>Rating</span>
-            <FaChevronDown
-              className={`transition-transform duration-300 ${
-                rating ? "rotate-180" : "rotate-0"
-              }`}
+            <input
+              type="radio"
+              name="ratingFilter"
+              value={r}
+              checked={isActive}
+              onChange={() => {
+                setLocalMinRating(r);
+                maybeApplySingle("minRating");
+              }}
+              className="h-4 w-4 cursor-pointer accent-[#0A4D4A]"
             />
-          </button>
 
-          {/* Content */}
-          {rating && (
-            <div className="grid grid-cols-2 gap-2 mt-3">
-              {ratingOptions.map((r: number) => {
-                const isActive = localMinRating === r;
+            <span className="text-sm text-gray-800">
+              {r === 0 ? "Any" : `⭐ ${r}.0+`}
+            </span>
+          </label>
+        );
+      })}
+    </div>
+  )}
+</div>
 
-                return (
-                  <button
-                    key={r}
-                    onClick={() => {
-                      setLocalMinRating(r);
-                      maybeApplySingle("minRating");
-                    }}
-                    className={`text-sm py-2 px-3 border rounded-md transition flex items-center justify-center ${
-                      isActive
-                        ? "bg-[#0A4D4A] text-white border-[#0A4D4A]"
-                        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-                    }`}
-                  >
-                    {r === 0 ? "Any" : `⭐ ${r}.0+`}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
 
-        <div className="mb-3">
-          {/* Header with arrow */}
+      <div className="mb-3">
+  {/* Header with arrow */}
+  <button
+    onClick={() => setCampability(!campability)}
+    aria-expanded={campability}
+    className="w-full flex items-center justify-between text-xs font-medium text-gray-700"
+  >
+    <span>Compability</span>
+    <FaChevronDown
+      className={`transition-transform duration-300 ${
+        campability ? "rotate-180" : "rotate-0"
+      }`}
+    />
+  </button>
+
+  {/* Collapsible Content */}
+  {campability && (
+    <div className="grid grid-cols-2 gap-2 mt-3">
+      {percentOptions.map((p) => {
+        const isActive = localMatchPercent === p;
+
+        return (
           <button
-            onClick={() => setCampability(!campability)}
-            aria-expanded={campability}
-            className="w-full flex items-center justify-between text-xs font-medium text-gray-700"
+            key={p}
+            onClick={() => {
+              setLocalMatchPercent(p);
+              maybeApplySingle("matchPercent");
+            }}
+            className={`text-sm py-2 px-3 rounded-xl w-full transition
+              ${
+                isActive
+                  ? "bg-[#E8F1F1] text-[#0A4D4A]"   // active = light bg
+                  : "bg-transparent text-gray-700"   // inactive = no bg
+              }
+            `}
           >
-            <span>Campability</span>
-            <FaChevronDown
-              className={`transition-transform duration-300 ${
-                campability ? "rotate-180" : "rotate-0"
-              }`}
-            />
+            {p === 0 ? "All" : `+ ${p}%`}
           </button>
+        );
+      })}
+    </div>
+  )}
+</div>
 
-          {/* Content — collapsible */}
-          {campability && (
-            <div className="grid grid-cols-2 gap-2 mt-3">
-              {percentOptions.map((p) => {
-                const isActive = localMatchPercent === p;
 
-                return (
-                  <button
-                    key={p}
-                    onClick={() => {
-                      setLocalMatchPercent(p);
-                      maybeApplySingle("matchPercent");
-                    }}
-                    className={`text-sm py-2 px-3 border rounded-md transition ${
-                      isActive
-                        ? "bg-[#0A4D4A] text-white border-[#0A4D4A]"
-                        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-                    }`}
-                  >
-                    {p === 0 ? "All" : `${p}%+`}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
 
-        <div className="mb-3">
-          {/* Header with arrow */}
+
+<div className="mb-3">
+  {/* Header with arrow */}
+  <button
+    onClick={() => setSafe(!safe)}
+    aria-expanded={safe}
+    className="w-full flex items-center justify-between text-xs font-medium text-gray-700"
+  >
+    <span>Safe Score</span>
+    <FaChevronDown
+      className={`transition-transform duration-300 ${
+        safe ? "rotate-180" : "rotate-0"
+      }`}
+    />
+  </button>
+
+  {/* Collapsible Content */}
+  {safe && (
+    <div className="grid grid-cols-2 gap-2 mt-3">
+      {percentOptions.map((p) => {
+        const isActive = localScorePercent === p;
+
+        return (
           <button
-            onClick={() => setSafe(!safe)}
-            aria-expanded={safe}
-            className="w-full flex items-center justify-between text-xs font-medium text-gray-700"
+            key={p}
+            onClick={() => {
+              setLocalScorePercent(p);
+              maybeApplySingle("scorePercent");
+            }}
+            className={`text-sm py-2 px-3 rounded-xl w-full transition
+              ${
+                isActive
+                  ? "bg-[#E8F1F1] text-[#0A4D4A]"   // active
+                  : "bg-transparent text-gray-700"    // inactive = no bg
+              }
+            `}
           >
-            <span>Safe Percent</span>
-            <FaChevronDown
-              className={`transition-transform duration-300 ${
-                safe ? "rotate-180" : "rotate-0"
-              }`}
-            />
+            {p === 0 ? "All" : `+ ${p}%`}
           </button>
-
-          {/* Content - collapsible */}
-          {safe && (
-            <div className="grid grid-cols-2 gap-2 mt-3">
-              {percentOptions.map((p) => {
-                const isActive = localScorePercent === p;
-
-                return (
-                  <button
-                    key={p}
-                    onClick={() => {
-                      setLocalScorePercent(p);
-                      maybeApplySingle("scorePercent");
-                    }}
-                    className={`text-sm py-2 px-3 border rounded-md transition ${
-                      isActive
-                        ? "bg-[#0A4D4A] text-white border-[#0A4D4A]"
-                        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-                    }`}
-                  >
-                    {p === 0 ? "All" : `${p}%+`}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
+        );
+      })}
+    </div>
+  )}
+</div>
+      
 
         {/* Sliders */}
         <div>
